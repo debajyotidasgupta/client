@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "../static/css/main.964fdded.css",
-    "main.js": "../static/js/main.803a3c34.js",
-    "static/js/787.c4e7f8f9.chunk.js": "../static/js/787.c4e7f8f9.chunk.js",
-    "static/media/business-stats.gif": "../static/media/business-stats.7c6db552d5cfe4822ddd.gif",
-    "static/media/money-return.gif": "../static/media/money-return.b049601ad43816ad4015.gif",
-    "static/media/artificial-intelligence-isometric.jpg": "../static/media/artificial-intelligence-isometric.cf14c05c21e47e093823.jpg",
-    "static/media/rubiks-cube-transformation.gif": "../static/media/rubiks-cube-transformation.bf7f60216373606de08e.gif",
-    "static/media/brain-teasers-geometric-shape.gif": "../static/media/brain-teasers-geometric-shape.3938a7eff9329f9648ed.gif",
-    "static/media/searched.gif": "../static/media/searched.f23289dcf6160b8f5c3c.gif",
-    "static/media/artificial-intelligence.png": "../static/media/artificial-intelligence.3107317b9ca7a0c2a6c1.png",
-    "index.html": "../index.html",
-    "main.964fdded.css.map": "../static/css/main.964fdded.css.map",
-    "main.803a3c34.js.map": "../static/js/main.803a3c34.js.map",
-    "787.c4e7f8f9.chunk.js.map": "../static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/static/css/main.964fdded.css",
+    "main.js": "/static/js/main.7babdbdf.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/business-stats.gif": "/static/media/business-stats.7c6db552d5cfe4822ddd.gif",
+    "static/media/money-return.gif": "/static/media/money-return.b049601ad43816ad4015.gif",
+    "static/media/artificial-intelligence-isometric.jpg": "/static/media/artificial-intelligence-isometric.cf14c05c21e47e093823.jpg",
+    "static/media/rubiks-cube-transformation.gif": "/static/media/rubiks-cube-transformation.bf7f60216373606de08e.gif",
+    "static/media/brain-teasers-geometric-shape.gif": "/static/media/brain-teasers-geometric-shape.3938a7eff9329f9648ed.gif",
+    "static/media/searched.gif": "/static/media/searched.f23289dcf6160b8f5c3c.gif",
+    "static/media/artificial-intelligence.png": "/static/media/artificial-intelligence.3107317b9ca7a0c2a6c1.png",
+    "index.html": "/index.html",
+    "main.964fdded.css.map": "/static/css/main.964fdded.css.map",
+    "main.7babdbdf.js.map": "/static/js/main.7babdbdf.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.803a3c34.js"
+    "static/js/main.7babdbdf.js"
   ]
 }
