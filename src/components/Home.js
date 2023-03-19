@@ -124,6 +124,7 @@ const styles = {
     padding: "1rem",
     margin: "0 1rem",
     boxSizing: "border-box",
+    lineHeight: "1.6rem",
     fontSize: "1.1rem",
     fontWeight: "400",
   },
@@ -249,6 +250,7 @@ const Section2 = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding-top: 4rem;
   }
 
   img {
