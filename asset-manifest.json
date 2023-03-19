@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.964fdded.css",
+    "main.js": "/static/js/main.330a499a.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/artificial-intelligence-isometric.jpg": "/static/media/artificial-intelligence-isometric.cf14c05c21e47e093823.jpg",
+    "static/media/artificial-intelligence.png": "/static/media/artificial-intelligence.3107317b9ca7a0c2a6c1.png",
+    "index.html": "/index.html",
+    "main.964fdded.css.map": "/static/css/main.964fdded.css.map",
+    "main.330a499a.js.map": "/static/js/main.330a499a.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.330a499a.js"
+  ]
+}
