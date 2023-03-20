@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Constants from "../Constants";
 
-import Card from "./Card";
+import { BasicCard, LightCard } from "./Card";
 
 import Image1 from "../assets/artificial-intelligence.png";
 import Image2 from "../assets/artificial-intelligence-isometric.jpg";
@@ -11,6 +11,11 @@ import SearchGIF from "../assets/searched.gif";
 import MoneyReturnGIF from "../assets/money-return.gif";
 import RubiksCube from "../assets/rubiks-cube-transformation.gif";
 import BrainTeaser from "../assets/brain-teasers-geometric-shape.gif";
+import APIFileFormat from "../assets/api-file-format-extension.gif";
+import Upload from "../assets/upload.gif";
+import LaptopBooster from "../assets/laptop-booster.gif";
+import Quotes from "../assets/quotes.svg";
+import SaleFunnel from "../assets/sales-filter.gif";
 
 function Home() {
   return (
@@ -50,17 +55,17 @@ function Home() {
           <h2 style={styles.s3d1h2}>Unlock your sales potential</h2>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <Card
+          <BasicCard
             title="Automatic Sequencing"
             body="Take your email sequencing to the next level by customizing your emailing schedule as per the company being targeted automatically"
             icon={BusinessGIF}
           />
-          <Card
+          <BasicCard
             title="Advance Client Recommendations"
             body="Using our dynamic AI recommender engine receive more accurate prospect lists which evolve as you do!"
             icon={SearchGIF}
           />
-          <Card
+          <BasicCard
             title="Longterm Lead tracking"
             body="Don't miss out on any leads with notifications for leads that were unsuccessful when they are back in the market for your product."
             icon={MoneyReturnGIF}
@@ -89,6 +94,206 @@ function Home() {
           </div>
         </div>
       </Section4>
+      <Section5>
+        <div
+          style={{
+            width: "70%",
+            height: "fit-content",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              fontWeight: "500",
+              fontSize: "1.6rem",
+              textAlign: "left",
+              paddingBottom: "4rem",
+            }}
+          >
+            Get the most out of Akido
+          </div>
+          <div
+            style={{
+              width: "100%",
+              fontWeight: "400",
+              fontSize: "1.1rem",
+              lineHeight: "1.5rem",
+              textAlign: "left",
+              boxSizing: "border-box",
+              paddingRight: "25rem",
+            }}
+          >
+            Trello's intuitive features give any team the ability to quickly set
+            up and customize workflows for just about anything.
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "fit-content",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              paddingTop: "2rem",
+            }}
+          >
+            <LightCard
+              icon={APIFileFormat}
+              title="API Integrations"
+              body="Connect your existing apps to Akido workflow or add a Power-Up to fine-tune your specific needs."
+              button="Browse Integrations"
+            />
+            <LightCard
+              icon={Upload}
+              title="Upload CVS"
+              body="Upload current leads and get rankings insights and contact details using our algorithm."
+              button="Get to know Automation"
+            />
+            <LightCard
+              icon={LaptopBooster}
+              title="Optimized Filter extension"
+              body="Get most out of filters when conducting manual searches via custom filter recommendations for linked in."
+              button="Explore Enterprise"
+            />
+          </div>
+        </div>
+      </Section5>
+      <Section6>
+        <div
+          style={{
+            height: "80vh",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              height: "65%",
+              width: "70%",
+              display: "flex",
+              boxShadow:
+                "0 0.2rem 0.3rem rgba(9, 30, 66, 0.31), 0 0 0.15rem rgba(9, 30, 66, 0.31)",
+            }}
+          >
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                backgroundColor: "#ffffff",
+                position: "relative",
+              }}
+            >
+              <img
+                src={Quotes}
+                width="50%"
+                alt="quotes"
+                style={{ position: "absolute", top: "0", left: "0" }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "1.5rem",
+                  left: "1.5rem",
+                  textAlign: "justify",
+                  boxSizing: "border-box",
+                  paddingRight: "5rem",
+                  lineHeight: "1.5rem",
+                }}
+              >
+                I'm always looking for ways to stay ahead of the game. That's
+                why I was so impressed with this tool. It's hands down the best
+                lead-generation platform I've ever used. The accuracy of the
+                data is unparalleled
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  position: "absolute",
+                  bottom: "3.5rem",
+                  left: "1.5rem",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-start",
+                  height: "fit-content",
+                  borderTopColor: "#000",
+                  borderTopWidth: "1px",
+                  borderTopStyle: "solid",
+                  lineHeight: "1.2rem",
+                  fontSize: "0.8rem",
+                  letterSpacing: "0.04rem",
+                  boxSizing: "border-box",
+                  paddingTop: "1rem",
+                }}
+              >
+                <span>Shaan Acharya</span>
+                <span>Founder at Sales High</span>
+              </div>
+            </div>
+            <div
+              style={{
+                width: "50%",
+                height: "100%",
+                backgroundColor: Constants().Theme.Base,
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  width: "30%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  fontWeight: "500",
+                  fontSize: "1.4rem",
+                  lineHeight: "1.9rem",
+                  textAlign: "left",
+                  color: "#ffffff",
+                  position: "absolute",
+                  top: "2rem",
+                  left: "2rem",
+                }}
+              >
+                10 times more conversions than human conducted prospecting
+              </div>
+              <img
+                style={{
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  position: "absolute",
+                  bottom: "-1.8rem",
+                  right: "-2rem",
+                }}
+                src={SaleFunnel}
+                alt="sales-funnel"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            height: "20vh",
+            width: "100%",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "fit-content",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight: "400",
+              fontSize: "1.1rem",
+            }}
+          >
+            Join over 2,000,000 teams worldwide that are using Akido to get more
+            done.
+          </div>
+        </div>
+      </Section6>
     </div>
   );
 }
@@ -171,6 +376,25 @@ const Video = styled.div`
   height: 60%;
   background-color: #d9d9d9;
   display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Section6 = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, #e6fcff 0%, #ffffff 100%);
+`;
+
+const Section5 = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;

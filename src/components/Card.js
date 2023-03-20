@@ -1,7 +1,81 @@
 import React from "react";
 import Constants from "../Constants";
+import styled from "styled-components";
 
-export default function Card(props) {
+const Button = styled.button`
+  font-size: 0.9rem;
+  font-weight: 400;
+  background-color: #fff;
+  border-color: #0065ff;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  height: fit-content;
+
+  &:hover {
+    background-color: #0065ff;
+    color: #fff;
+    transform: scale(1.05) translateY(-2px);
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
+function LightCard(props) {
+  const { title, body, icon, button } = props;
+
+  const styles = {
+    card: {
+      width: "31%",
+      height: "22rem",
+      padding: "1.3rem",
+      paddingTop: "0",
+      boxSizing: "border-box",
+      backgroundColor: "#FAFBFC",
+    },
+    title: {
+      fontSize: "1.25rem",
+      fontWeight: "500",
+      color: "#000",
+      paddingBottom: "0.6rem",
+    },
+    body: {
+      fontSize: "0.9rem",
+      fontWeight: "400",
+      lineHeight: "1.3rem",
+      color: "#000",
+    },
+    imageContainer: {
+      width: "100%",
+      height: "40%",
+      display: "flex",
+      justifyContent: "flex-start",
+      alignItems: "center",
+    },
+    textContainer: {
+      height: "60%",
+      textAlign: "left",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+    },
+  };
+
+  return (
+    <div style={styles.card}>
+      <div style={styles.imageContainer}>
+        <img src={icon} alt="icon" height="70%" />
+      </div>
+      <div style={styles.textContainer}>
+        <div>
+          <div style={styles.title}>{title}</div>
+          <div style={styles.body}>{body}</div>
+        </div>
+        <Button>{button}</Button>
+      </div>
+    </div>
+  );
+}
+
+function BasicCard(props) {
   const { title, body, icon } = props;
 
   const styles = {
@@ -54,3 +128,5 @@ export default function Card(props) {
     </div>
   );
 }
+
+export { BasicCard, LightCard };
