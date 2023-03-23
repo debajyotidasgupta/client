@@ -17,7 +17,16 @@ import LaptopBooster from "../assets/laptop-booster.gif";
 import Quotes from "../assets/quotes.svg";
 import SaleFunnel from "../assets/sales-filter.gif";
 
+import Coinbase from "../assets/logos/coinbase.svg";
+import Visa from "../assets/logos/visa.svg";
+import JohnDeere from "../assets/logos/john-deere.svg";
+import Zoom from "../assets/logos/zoom.png";
+import GrandHyatt from "../assets/logos/grand-hyatt.png";
+import Fender from "../assets/logos/fender.svg";
+
 function Home() {
+  const LogoList = [Coinbase, Visa, JohnDeere, Zoom, GrandHyatt, Fender];
+
   return (
     <div>
       <Section1>
@@ -93,6 +102,7 @@ function Home() {
             <img src={BrainTeaser} width="150%" alt="brain-teaser" />
           </div>
         </div>
+        text
       </Section4>
       <Section5>
         <div
@@ -274,7 +284,7 @@ function Home() {
         </div>
         <div
           style={{
-            height: "20vh",
+            height: "23vh",
             width: "100%",
           }}
         >
@@ -291,6 +301,22 @@ function Home() {
           >
             Join over 2,000,000 teams worldwide that are using Akido to get more
             done.
+          </div>
+          <div>
+            {LogoList.map((logo, index) => {
+              return (
+                <img
+                  key={index}
+                  src={logo}
+                  alt="logo"
+                  style={{
+                    height: "2rem",
+                    width: "auto",
+                    margin: "3rem 1rem",
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
       </Section6>
@@ -446,7 +472,6 @@ const Section2 = styled.div`
   .sc2-text {
     width: 35%;
     height: 100%;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
