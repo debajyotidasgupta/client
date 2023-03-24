@@ -1,18 +1,25 @@
 {
   "files": {
     "main.css": "./static/css/main.08800688.css",
-    "main.js": "./static/js/main.fd7fc62b.js",
+    "main.js": "./static/js/main.2569a8a1.js",
     "static/js/787.c4e7f8f9.chunk.js": "./static/js/787.c4e7f8f9.chunk.js",
     "static/media/developers-team.gif": "./static/media/developers-team.2e5312f6220bf20ad9db.gif",
     "static/media/deep-learning-algorithm.gif": "./static/media/deep-learning-algorithm.0d466ab555f28693c09d.gif",
     "static/media/customer-service.gif": "./static/media/customer-service.6bf8e1c1af0462ab3aa2.gif",
+    "static/media/faqs.gif": "./static/media/faqs.a669d11000ebac5e3a8e.gif",
     "static/media/online-interview.gif": "./static/media/online-interview.10f61fd1735aab69859e.gif",
+    "static/media/secure-website.gif": "./static/media/secure-website.d4543245bc49ed924f26.gif",
     "static/media/business-stats.gif": "./static/media/business-stats.7c6db552d5cfe4822ddd.gif",
     "static/media/data-analysis.gif": "./static/media/data-analysis.c7737d6e73f96654a800.gif",
     "static/media/money-return.gif": "./static/media/money-return.b049601ad43816ad4015.gif",
+    "static/media/online-collaboration.gif": "./static/media/online-collaboration.3a4a9d42f04166a3af92.gif",
+    "static/media/the-analysts-present-information-to-businessmen.gif": "./static/media/the-analysts-present-information-to-businessmen.5ec3fd70159f39cdd06e.gif",
     "static/media/pricing-strategy.gif": "./static/media/pricing-strategy.03ebba8b1f20842919a0.gif",
     "static/media/ui-ux-designer-working-on-new-project.gif": "./static/media/ui-ux-designer-working-on-new-project.fb490c385f35c453dc13.gif",
+    "static/media/freelance-developer-working-on-laptop.gif": "./static/media/freelance-developer-working-on-laptop.f10e5cfeb7f9bae09624.gif",
+    "static/media/faq.gif": "./static/media/faq.f99994ababb3de15ad8a.gif",
     "static/media/sales-filter.gif": "./static/media/sales-filter.738db99ba91b905cac0a.gif",
+    "static/media/cost-deduction.gif": "./static/media/cost-deduction.cbe0635573376a1233bd.gif",
     "static/media/fixing-api-problem.gif": "./static/media/fixing-api-problem.e3f907e9036ae1465e50.gif",
     "static/media/man-having-push-notifications-on-his-phone.gif": "./static/media/man-having-push-notifications-on-his-phone.d3d3c8572d6635816d97.gif",
     "static/media/api-file-format-extension.gif": "./static/media/api-file-format-extension.dbf513c05f716725f150.gif",
@@ -21,6 +28,7 @@
     "static/media/rubiks-cube-transformation.gif": "./static/media/rubiks-cube-transformation.bf7f60216373606de08e.gif",
     "static/media/brain-teasers-geometric-shape.gif": "./static/media/brain-teasers-geometric-shape.3938a7eff9329f9648ed.gif",
     "static/media/searched.gif": "./static/media/searched.f23289dcf6160b8f5c3c.gif",
+    "static/media/cancel-setting.gif": "./static/media/cancel-setting.1fe3b3ade4cb9e19c2d8.gif",
     "static/media/pricing.gif": "./static/media/pricing.bbe491ba1adeda333ad5.gif",
     "static/media/fender.svg": "./static/media/fender.f379ed1302ac244e4638e243a55d4310.svg",
     "static/media/upload.gif": "./static/media/upload.e64539cda5f597b50aac.gif",
@@ -33,11 +41,11 @@
     "static/media/quotes.svg": "./static/media/quotes.f2ef5a6762fd07325fc3a0f74cd4f9cb.svg",
     "index.html": "./index.html",
     "main.08800688.css.map": "./static/css/main.08800688.css.map",
-    "main.fd7fc62b.js.map": "./static/js/main.fd7fc62b.js.map",
+    "main.2569a8a1.js.map": "./static/js/main.2569a8a1.js.map",
     "787.c4e7f8f9.chunk.js.map": "./static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08800688.css",
-    "static/js/main.fd7fc62b.js"
+    "static/js/main.2569a8a1.js"
   ]
 }
