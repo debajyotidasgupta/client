@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.08800688.css",
-    "main.js": "./static/js/main.2569a8a1.js",
+    "main.js": "./static/js/main.48d3d7c5.js",
     "static/js/787.c4e7f8f9.chunk.js": "./static/js/787.c4e7f8f9.chunk.js",
     "static/media/developers-team.gif": "./static/media/developers-team.2e5312f6220bf20ad9db.gif",
     "static/media/deep-learning-algorithm.gif": "./static/media/deep-learning-algorithm.0d466ab555f28693c09d.gif",
     "static/media/customer-service.gif": "./static/media/customer-service.6bf8e1c1af0462ab3aa2.gif",
     "static/media/faqs.gif": "./static/media/faqs.a669d11000ebac5e3a8e.gif",
+    "static/media/resources.gif": "./static/media/resources.0799364b343bc406bee3.gif",
     "static/media/online-interview.gif": "./static/media/online-interview.10f61fd1735aab69859e.gif",
     "static/media/secure-website.gif": "./static/media/secure-website.d4543245bc49ed924f26.gif",
     "static/media/business-stats.gif": "./static/media/business-stats.7c6db552d5cfe4822ddd.gif",
@@ -41,11 +42,11 @@
     "static/media/quotes.svg": "./static/media/quotes.f2ef5a6762fd07325fc3a0f74cd4f9cb.svg",
     "index.html": "./index.html",
     "main.08800688.css.map": "./static/css/main.08800688.css.map",
-    "main.2569a8a1.js.map": "./static/js/main.2569a8a1.js.map",
+    "main.48d3d7c5.js.map": "./static/js/main.48d3d7c5.js.map",
     "787.c4e7f8f9.chunk.js.map": "./static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08800688.css",
-    "static/js/main.2569a8a1.js"
+    "static/js/main.48d3d7c5.js"
   ]
 }
