@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Solution from "./components/Solution";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
+import Resources from "./components/Resources";
 
 function App() {
   const [page, setPage] = useState("home");
@@ -19,6 +20,8 @@ function App() {
       {page === "solution" && <Solution />}
       {page === "pricing" && <Pricing />}
       {page === "faq" && <Faq />}
+      {page === "resources" && <Resources />}
+      {page === "contact-us" && <Home />}
       <Footer />
     </div>
   );
