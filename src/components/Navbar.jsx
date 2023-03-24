@@ -4,7 +4,7 @@ import Constants from "../Constants";
 import Logo from "../assets/logo.png";
 
 export default function Navbar(props) {
-  const nav_items = ["Solution", "Pricing", "Resources", "Contact Us"];
+  const nav_items = ["Solution", "Pricing", "Resources", "Contact Us", "FAQ"];
   const { setPage } = props;
 
   return (

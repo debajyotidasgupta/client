@@ -7,9 +7,10 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Solution from "./components/Solution";
 import Pricing from "./components/Pricing";
+import Faq from "./components/Faq";
 
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState("faq");
 
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       {page === "home" && <Home />}
       {page === "solution" && <Solution />}
       {page === "pricing" && <Pricing />}
+      {page === "faq" && <Faq />}
       <Footer />
     </div>
   );
