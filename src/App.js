@@ -10,7 +10,7 @@ import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
 
 function App() {
-  const [page, setPage] = useState("faq");
+  const [page, setPage] = useState("home");
 
   return (
     <div className="App">
