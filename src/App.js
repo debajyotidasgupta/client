@@ -1,24 +1,24 @@
 import "./App.css";
 
+import React, { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Solution from "./components/Solution";
-
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Pricing from "./components/Pricing";
 
 function App() {
+  const [page, setPage] = useState("home");
+
   return (
-    <Router basename="/">
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/solution" element={<Solution />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar setPage={setPage} />
+      {page === "home" && <Home />}
+      {page === "solution" && <Solution />}
+      {page === "pricing" && <Pricing />}
+      <Footer />
+    </div>
   );
 }
 

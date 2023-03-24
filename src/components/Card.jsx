@@ -2,6 +2,8 @@ import React from "react";
 import Constants from "../Constants";
 import styled from "styled-components";
 
+import Tick from "../assets/tick-circle.png";
+
 const Button = styled.button`
   font-size: 0.9rem;
   font-weight: 400;
@@ -18,6 +20,76 @@ const Button = styled.button`
     transition: all 0.2s ease-in-out;
   }
 `;
+
+function PricingCard(props) {
+  const { title, details, pricing, prospects } = props.data;
+
+  return (
+    <div
+      style={{
+        border: "1px solid #000",
+        height: "70vh",
+        width: "40vh",
+        backgroundColor: "#F4FEFF",
+      }}
+    >
+      <div
+        style={{
+          fontWeight: "700",
+          fontSize: "1.5rem",
+          borderBottom: "1px solid #000",
+          padding: "0.8rem 0",
+        }}
+      >
+        {title}
+      </div>
+      <div
+        style={{
+          height: "90%",
+          boxSizing: "border-box",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "left",
+            padding: "0.8rem",
+            fontSize: "0.9rem",
+            lineHeight: "1.3rem",
+            wordSpacing: "0.1rem",
+          }}
+        >
+          <div>
+            <ul>
+              {details.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+          {pricing ? (
+            <>
+              <div>Pricing: {pricing}</div>
+              <div>Prospects: {prospects}</div>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
+        <img
+          src={Tick}
+          alt="tick"
+          style={{
+            height: "10%",
+            paddingBottom: "0.5rem",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
 function LightCard(props) {
   const { title, body, icon, button } = props;
@@ -129,4 +201,4 @@ function BasicCard(props) {
   );
 }
 
-export { BasicCard, LightCard };
+export { BasicCard, LightCard, PricingCard };
