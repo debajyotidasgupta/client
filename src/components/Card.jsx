@@ -12,7 +12,6 @@ const Button = styled.button`
   padding: 0.8rem;
   box-sizing: border-box;
   height: fit-content;
-
   &:hover {
     background-color: #0065ff;
     color: #fff;
@@ -95,14 +94,6 @@ function LightCard(props) {
   const { title, body, icon, button } = props;
 
   const styles = {
-    card: {
-      width: "31%",
-      height: "22rem",
-      padding: "1.3rem",
-      paddingTop: "0",
-      boxSizing: "border-box",
-      backgroundColor: "#FAFBFC",
-    },
     title: {
       fontSize: "1.25rem",
       fontWeight: "500",
@@ -132,7 +123,7 @@ function LightCard(props) {
   };
 
   return (
-    <div style={styles.card}>
+    <LightCardCard>
       <div style={styles.imageContainer}>
         <img src={icon} alt="icon" height="70%" />
       </div>
@@ -143,7 +134,7 @@ function LightCard(props) {
         </div>
         <Button>{button}</Button>
       </div>
-    </div>
+    </LightCardCard>
   );
 }
 
@@ -189,7 +180,7 @@ function BasicCard(props) {
   };
 
   return (
-    <div style={styles.card}>
+    <BasicCardCard>
       <div style={styles.imageContainer}>
         <img style={styles.icon} src={icon} alt="icon" />
       </div>
@@ -197,8 +188,42 @@ function BasicCard(props) {
         <h3 style={styles.title}>{title}</h3>
         <p style={styles.body}>{body}</p>
       </div>
-    </div>
+    </BasicCardCard>
   );
 }
 
 export { BasicCard, LightCard, PricingCard };
+
+const LightCardCard = styled.div`
+  width: 31%;
+  height: 22rem;
+  padding: 1.3rem;
+  padding-top: 0;
+  box-sizing: border-box;
+  background-color: #fafbfc;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+`;
+
+const BasicCardCard = styled.div`
+  width: 23%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(9, 30, 66, 0.15);
+  background-color: #fff;
+  text-align: left;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+`;

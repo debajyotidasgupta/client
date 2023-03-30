@@ -63,7 +63,7 @@ function Home() {
           <h3 style={styles.s3d1h3}>Akido At work</h3>
           <h2 style={styles.s3d1h2}>Unlock your sales potential</h2>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <CardContainer1>
           <BasicCard
             title="Automatic Sequencing"
             body="Take your email sequencing to the next level by customizing your emailing schedule as per the company being targeted automatically"
@@ -79,73 +79,39 @@ function Home() {
             body="Don't miss out on any leads with notifications for leads that were unsuccessful when they are back in the market for your product."
             icon={MoneyReturnGIF}
           />
-        </div>
-        <div style={styles.s3d3}>
-          <span style={styles.s3d3span}>
+        </CardContainer1>
+        <S3D3>
+          <S3D3span>
             No need to start from scratch. Jump-start your workflow with a
             proven playbook designed for different teams. Customize it to make
             it yours.
-          </span>
+          </S3D3span>
           <Button>Explore all Use Cases</Button>
-        </div>
+        </S3D3>
       </Section3>
       <Section4>
         <div style={styles.s4d1}>Seeing is believing!</div>
-        <div style={styles.s4d2}>
-          <div style={styles.s4d2i}>
+        <S4D2>
+          <S4D2i>
             <img src={RubiksCube} width="150%" alt="rubiks-cube" />
-          </div>
-          <div style={styles.s4d2d1}>
+          </S4D2i>
+          <S4D2D1>
             <Video>Place holder for video file (name = Video 1)</Video>
-          </div>
-          <div style={styles.s4d2i}>
+          </S4D2D1>
+          <S4D2i>
             <img src={BrainTeaser} width="150%" alt="brain-teaser" />
-          </div>
-        </div>
+          </S4D2i>
+        </S4D2>
         text
       </Section4>
       <Section5>
-        <div
-          style={{
-            width: "70%",
-            height: "fit-content",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              fontWeight: "500",
-              fontSize: "1.6rem",
-              textAlign: "left",
-              paddingBottom: "4rem",
-            }}
-          >
-            Get the most out of Akido
-          </div>
-          <div
-            style={{
-              width: "100%",
-              fontWeight: "400",
-              fontSize: "1.1rem",
-              lineHeight: "1.5rem",
-              textAlign: "left",
-              boxSizing: "border-box",
-              paddingRight: "25rem",
-            }}
-          >
+        <S5D1>
+          <S5D1D1>Get the most out of Akido</S5D1D1>
+          <S5D1D2>
             Trello's intuitive features give any team the ability to quickly set
             up and customize workflows for just about anything.
-          </div>
-          <div
-            style={{
-              width: "100%",
-              height: "fit-content",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingTop: "2rem",
-            }}
-          >
+          </S5D1D2>
+          <LightCardContainer>
             <LightCard
               icon={APIFileFormat}
               title="API Integrations"
@@ -164,58 +130,25 @@ function Home() {
               body="Get most out of filters when conducting manual searches via custom filter recommendations for linked in."
               button="Explore Enterprise"
             />
-          </div>
-        </div>
+          </LightCardContainer>
+        </S5D1>
       </Section5>
       <Section6>
-        <div
-          style={{
-            height: "80vh",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              height: "65%",
-              width: "70%",
-              display: "flex",
-              boxShadow:
-                "0 0.2rem 0.3rem rgba(9, 30, 66, 0.31), 0 0 0.15rem rgba(9, 30, 66, 0.31)",
-            }}
-          >
-            <div
-              style={{
-                width: "50%",
-                height: "100%",
-                backgroundColor: "#ffffff",
-                position: "relative",
-              }}
-            >
+        <S6D1>
+          <S6D1D1>
+            <S6D1D1quotes>
               <img
                 src={Quotes}
                 width="50%"
                 alt="quotes"
                 style={{ position: "absolute", top: "0", left: "0" }}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  top: "1.5rem",
-                  left: "1.5rem",
-                  textAlign: "justify",
-                  boxSizing: "border-box",
-                  paddingRight: "5rem",
-                  lineHeight: "1.5rem",
-                }}
-              >
+              <S6D1D1quotestext>
                 I'm always looking for ways to stay ahead of the game. That's
                 why I was so impressed with this tool. It's hands down the best
                 lead-generation platform I've ever used. The accuracy of the
                 data is unparalleled
-              </div>
+              </S6D1D1quotestext>
               <div
                 style={{
                   display: "flex",
@@ -239,15 +172,8 @@ function Home() {
                 <span>Shaan Acharya</span>
                 <span>Founder at Sales High</span>
               </div>
-            </div>
-            <div
-              style={{
-                width: "50%",
-                height: "100%",
-                backgroundColor: Constants().Theme.Base,
-                position: "relative",
-              }}
-            >
+            </S6D1D1quotes>
+            <S6D1D1image>
               <div
                 style={{
                   width: "30%",
@@ -266,28 +192,11 @@ function Home() {
               >
                 10 times more conversions than human conducted prospecting
               </div>
-              <img
-                style={{
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  position: "absolute",
-                  bottom: "-1.8rem",
-                  right: "-2rem",
-                }}
-                src={SaleFunnel}
-                alt="sales-funnel"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            height: "23vh",
-            width: "100%",
-          }}
-        >
+              <CustomImage src={SaleFunnel} alt="sales-funnel" />
+            </S6D1D1image>
+          </S6D1D1>
+        </S6D1>
+        <FinalContainer>
           <div
             style={{
               width: "100%",
@@ -302,23 +211,12 @@ function Home() {
             Join over 2,000,000 teams worldwide that are using Akido to get more
             done.
           </div>
-          <div>
+          <IconContainer>
             {LogoList.map((logo, index) => {
-              return (
-                <img
-                  key={index}
-                  src={logo}
-                  alt="logo"
-                  style={{
-                    height: "2rem",
-                    width: "auto",
-                    margin: "3rem 1rem",
-                  }}
-                />
-              );
+              return <CustomIcon key={index} src={logo} alt="logo" />;
             })}
-          </div>
-        </div>
+          </IconContainer>
+        </FinalContainer>
       </Section6>
     </div>
   );
@@ -344,12 +242,6 @@ const styles = {
     fontWeight: "500",
     fontSize: "2rem",
   },
-  s3d3: {
-    padding: "3rem 10rem",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
   s3d3span: {
     width: "60%",
     padding: "1rem",
@@ -370,32 +262,237 @@ const styles = {
     fontSize: "1.9rem",
     color: "#fff",
   },
-  s4d2: {
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "stretch",
-    fontWeight: "450",
-    fontSize: "1.8rem",
-    top: "0",
-  },
-  s4d2i: {
-    width: "25%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
-  },
-  s4d2d1: {
-    width: "50%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden",
-  },
 };
+
+const CustomIcon = styled.img`
+  height: 2rem;
+  width: auto;
+  margin: 3rem 1rem;
+
+  @media (max-width: 768px) {
+    width: 5rem;
+    margin: 0.5rem;
+  }
+`;
+
+const IconContainer = styled.div`
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 0.5rem;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    margin: 0 1rem;
+  }
+`;
+
+const FinalContainer = styled.div`
+  width: 100%;
+  height: 23vh;
+
+  @media (max-width: 768px) {
+    height: fit-content;
+  }
+`;
+
+const CustomImage = styled.img`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -1.8rem;
+  right: -2rem;
+
+  @media (max-width: 768px) {
+    height: 60%;
+    width: auto;
+    bottom: 2.8rem;
+  }
+`;
+
+const S6D1D1image = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: ${Constants().Theme.Base};
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const S6D1D1quotestext = styled.div`
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  text-align: justify;
+  box-sizing: border-box;
+  padding-right: 5rem;
+  line-height: 1.5rem;
+
+  @media (max-width: 768px) {
+    padding-right: 2rem;
+  }
+`;
+
+const S6D1D1quotes = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const S6D1D1 = styled.div`
+  height: 65%;
+  width: 70%;
+  display: flex;
+  box-shadow: 0 0.2rem 0.3rem rgba(9, 30, 66, 0.31),
+    0 0 0.15rem rgba(9, 30, 66, 0.31);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const S6D1 = styled.div`
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100vh;
+  }
+`;
+
+const LightCardContainer = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+`;
+
+const S5D1D2 = styled.div`
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 25rem;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
+`;
+
+const S5D1D1 = styled.div`
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: left;
+  padding-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 2rem;
+  }
+`;
+
+const S5D1 = styled.div`
+  width: 70%;
+  height: fit-content;
+`;
+
+const S4D2 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-weight: 450;
+  font-size: 1.8rem;
+  top: 0;
+
+  @media (max-width: 768px) {
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+`;
+
+const S4D2D1 = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 100%;
+    align-items: flex-end;
+  }
+`;
+
+const S4D2i = styled.div`
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const S3D3span = styled.span`
+  width: 60%;
+  padding: 1rem;
+  margin: 0 1rem;
+  box-sizing: border-box;
+  line-height: 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+`;
+
+const S3D3 = styled.div`
+  padding: 3rem 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+  }
+`;
 
 const Video = styled.div`
   width: 100%;
@@ -404,6 +501,11 @@ const Video = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 50%;
+    font-size: 1.3rem;
+  }
 `;
 
 const Section6 = styled.div`
@@ -423,6 +525,12 @@ const Section5 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: fit-content;
+    padding: 2rem 0;
+    box-sizing: border-box;
+  }
 `;
 
 const Section4 = styled.div`
@@ -430,6 +538,10 @@ const Section4 = styled.div`
   width: 100%;
   height: 100vh;
   background-color: ${Constants().Theme.Base};
+
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
 `;
 
 const Button = styled.button`
@@ -446,6 +558,19 @@ const Button = styled.button`
     color: #fff;
     transform: scale(1.05) translateY(-2px);
     transition: all 0.2s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    margin: 1rem 0;
+  }
+`;
+
+const CardContainer1 = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
@@ -515,6 +640,31 @@ const Section2 = styled.div`
       transition: all 0.3s ease-in-out;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .sc2-text {
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .sc2-img {
+      width: 100%;
+      padding: 0;
+
+      img {
+        width: 80%;
+
+        &: hover {
+          cursor: pointer;
+          box-shadow: 0 0 0.5rem 0 rgba(0, 128, 255, 0.5);
+          transform: translateY(-5px);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+  }
 `;
 
 const Section1 = styled.div`
@@ -525,6 +675,10 @@ const Section1 = styled.div`
   height: fit-content;
   color: #fff;
   background-color: ${Constants().Theme.Base};
+
+  @media screen and (max-width: 914px) {
+    flex-direction: column;
+  }
 `;
 
 const TextBanner = styled.span`
@@ -537,6 +691,10 @@ const TextBanner = styled.span`
   letter-spacing: 0.05rem;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const Image = styled.img`
@@ -544,4 +702,11 @@ const Image = styled.img`
   width: fit-content;
   padding: 0 8rem;
   object-fit: contain;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2rem;
+  }
 `;

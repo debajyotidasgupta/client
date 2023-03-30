@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Constants from "../Constants";
 import Logo from "../assets/logo.png";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Navbar(props) {
+  const [isOpen, setOpen] = useState(false);
   const nav_items = ["Solution", "Pricing", "Resources", "Contact Us", "FAQ"];
   const { setPage } = props;
 
@@ -31,6 +36,7 @@ export default function Navbar(props) {
             setPage={setPage}
           />
         </NavItems>
+        <StyledMenuIcon onClick={() => setOpen(true)} />
       </NavbarLayout>
     </NavbarContainer>
   );
@@ -50,6 +56,14 @@ function NavItem(props) {
     </LinkItem>
   );
 }
+
+const StyledMenuIcon = styled(MenuIcon)`
+  display: none;
+  @media screen and (max-width: 914px) {
+    display: block;
+    cursor: pointer;
+  }
+`;
 
 const LinkItem = styled.button`
             border: none;
@@ -74,6 +88,7 @@ const LinkItem = styled.button`
             `;
 
 const NavbarContainer = styled.div`
+  width: 100%;
   height: fit-content;
   padding-bottom: 1.5rem;
 `;
@@ -83,7 +98,6 @@ const NavbarLayout = styled.div`
   height: 7vh;
   justify-content: space-between;
   align-items: flex-start;
-  /* background-color: green; */
 `;
 
 const LogoContainer = styled.div`
@@ -100,4 +114,8 @@ const NavItems = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 914px) {
+    display: none;
+  }
 `;
