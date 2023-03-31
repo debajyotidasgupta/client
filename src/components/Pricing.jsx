@@ -57,29 +57,13 @@ function Pricing() {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "30vh",
-          fontSize: "1.8rem",
-          backgroundColor: Constants().Theme.Base,
-          color: "white",
-        }}
-      >
+      <Container1>
         <div>
           We offer a variety of pricing packages to fit your business's unique
           needs!
         </div>
-        <img
-          src={PricingImage}
-          alt="pricing"
-          style={{
-            height: "100%",
-          }}
-        />
-      </div>
+        <C1Image src={PricingImage} alt="pricing" />
+      </Container1>
       <div
         style={{
           display: "flex",
@@ -90,19 +74,11 @@ function Pricing() {
         }}
       >
         <div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "fit-content",
-              paddingTop: "5rem",
-            }}
-          >
+          <CardContainer>
             {data.map((item, index) => {
               return <PricingCard key={index} data={item} />;
             })}
-          </div>
+          </CardContainer>
           <button
             style={{
               backgroundColor: Constants().Theme.Base,
@@ -116,29 +92,14 @@ function Pricing() {
           >
             Subscribe
           </button>
-          <h1
-            style={{
-              padding: "2rem 15rem 5rem",
-              textAlign: "left",
-              lineHeight: "1.3",
-            }}
-          >
+          <StyledH1>
             Discover the Power of AI-Driven Prospecting: Our Data-Backed
             Statistics Speak for Themselves!
-          </h1>
+          </StyledH1>
           <JustP>
             Say goodbye to manual prospecting - Akido's AI algorithms have
             helped businesses save up to 80% of their prospecting time.
-            <img
-              src={PricingStrategy}
-              alt="pricing-strategy"
-              style={{
-                position: "absolute",
-                top: "2rem",
-                right: "6rem",
-                width: "37%",
-              }}
-            />
+            <JustImg src={PricingStrategy} alt="pricing-strategy" />
           </JustP>
           <JustP>
             Get ahead of your competition - Akido's custom recommendations have
@@ -153,12 +114,7 @@ function Pricing() {
             Join the 80% of businesses that have seen significant growth with
             Akido's AI prospecting technology.
           </JustP>
-          <div
-            style={{
-              boxSizing: "border-box",
-              padding: "8rem 5rem 13rem",
-            }}
-          >
+          <Container3>
             <div
               style={{
                 backgroundColor: "#D9D9D9",
@@ -170,12 +126,34 @@ function Pricing() {
               Savings and competator calulator as long as calc for custom
               packages .
             </div>
-          </div>
+          </Container3>
         </div>
       </div>
     </div>
   );
 }
+
+const Container3 = styled.div`
+  box-sizing: border-box;
+  padding: 8rem 5rem 13rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+`;
+
+const JustImg = styled.img`
+  position: absolute;
+  top: 2rem;
+  right: 6rem;
+  width: 37%;
+
+  @media (max-width: 768px) {
+    width: 70%;
+    top: -4rem;
+    right: 5rem;
+  }
+`;
 
 const JustP = styled.p`
   font-weight: 700;
@@ -193,6 +171,67 @@ const JustP = styled.p`
 
   &:last-of-type {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+
+    &:first-of-type {
+      padding-top: 12rem;
+    }
+  }
+`;
+
+const StyledH1 = styled.h1`
+  padding: 2rem 15rem 5rem;
+  text-align: left;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+`;
+
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding-top: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const Container1 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  font-size: 1.8rem;
+  background-color: ${Constants().Theme.Base};
+  color: white;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 50vh;
+
+    & > div:first-of-type {
+      padding: 2rem;
+    }
+  }
+`;
+
+const C1Image = styled.img`
+  height: 100%;
+
+  @media (max-width: 768px) {
+    height: 50%;
   }
 `;
 
