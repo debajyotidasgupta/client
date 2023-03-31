@@ -1,6 +1,7 @@
 import React from "react";
 
 import Constants from "../Constants";
+import styled from "styled-components";
 
 import Quality from "../assets/ui-ux-designer-working-on-new-project.gif";
 import DeepLearning from "../assets/deep-learning-algorithm.gif";
@@ -59,17 +60,7 @@ function Solution() {
 
   return (
     <div>
-      <div
-        style={{
-          backgroundColor: Constants().Theme.Base,
-          height: "50vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          boxSizing: "border-box",
-          padding: "0 5.5rem",
-        }}
-      >
+      <Container1>
         <p
           style={{
             color: "white",
@@ -81,15 +72,8 @@ function Solution() {
           Uncover Your Next Big Opportunity: Akido's AI- Powered Prospecting
           Delivers Results
         </p>
-        <img
-          src={OnlineInterview}
-          alt="Online Interview"
-          style={{
-            height: "120%",
-            objectFit: "contain",
-          }}
-        />
-      </div>
+        <Image1 src={OnlineInterview} alt="Online Interview" />
+      </Container1>
       <div
         style={{
           boxSizing: "border-box",
@@ -98,52 +82,11 @@ function Solution() {
         }}
       >
         {data.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              background: "linear-gradient(0deg, #E6FCFF 0%, #FFFFFF 100%)",
-              padding: "3rem",
-              textAlign: "left",
-              position: "relative",
-            }}
-          >
-            <h1
-              style={{
-                color: "#0F4C81",
-                fontSize: "30px",
-                fontWeight: "800",
-                paddingTop: "6rem",
-                paddingBottom: "3rem",
-              }}
-            >
-              {item.title}
-            </h1>
-            <p
-              style={{
-                color: "#0F4C81",
-                fontSize: "20px",
-                fontWeight: "400",
-                padding: "3rem 12rem",
-                lineHeight: "1.7",
-                wordSpacing: "0.3rem",
-              }}
-            >
-              {item.description}
-            </p>
-            <img
-              src={item.image}
-              alt={`${item.title}`}
-              style={{
-                position: "absolute",
-                right: "12rem",
-                bottom: "-15rem",
-                height: "22rem",
-                width: "22rem",
-                objectFit: "cover",
-                zIndex: "1",
-              }}
-            />
-          </div>
+          <SubSection key={index}>
+            <StyledH1>{item.title}</StyledH1>
+            <StyledP>{item.description}</StyledP>
+            <StyledImg src={item.image} alt={`${item.title}`} />
+          </SubSection>
         ))}
       </div>
       <div
@@ -200,3 +143,92 @@ function Solution() {
 }
 
 export default Solution;
+
+const Container1 = styled.div`
+  background-color: ${Constants().Theme.Base};
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 5.5rem;
+
+  @media (max-width: 768px) {
+    height: fit-content;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+`;
+
+const Image1 = styled.img`
+  height: 120%;
+  object-fit: contain;
+
+  @media (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
+const SubSection = styled.div`
+  background: linear-gradient(0deg, #e6fcff 0%, #ffffff 100%);
+  padding: 3rem;
+  text-align: left;
+  position: relative;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    :last-child {
+      img {
+        bottom: -12rem;
+        width: 60%;
+      }
+    }
+  }
+`;
+
+const StyledH1 = styled.h1`
+  color: #0f4c81;
+  font-size: 30px;
+  font-weight: 800;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+`;
+
+const StyledP = styled.p`
+  color: #0f4c81;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 3rem 12rem;
+  line-height: 1.7;
+  word-spacing: 0.3rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+`;
+
+const StyledImg = styled.img`
+  position: absolute;
+  right: 12rem;
+  bottom: -15rem;
+  height: 22rem;
+  width: 22rem;
+  object-fit: cover;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    right: 3rem;
+    bottom: -6rem;
+  }
+`;
