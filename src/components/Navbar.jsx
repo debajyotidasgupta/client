@@ -36,15 +36,7 @@ export default function Navbar(props) {
             <NavItem key={index} text={item} setPage={setPage} />
           ))}
         </NavItems>
-        <NavItems style={{ width: "fit-content" }}>
-          <NavItem text="Log In" setPage={setPage} />
-          <NavItem
-            text="Sign Up"
-            color={Constants().Theme.Base}
-            setPage={setPage}
-          />
-        </NavItems>
-        <Button
+        <StyledButton
           id="demo-positioned-button"
           aria-controls={open ? "demo-positioned-menu" : undefined}
           aria-haspopup="true"
@@ -52,7 +44,7 @@ export default function Navbar(props) {
           onClick={handleClick}
         >
           <StyledMenuIcon />
-        </Button>
+        </StyledButton>
         <Menu
           id="demo-positioned-menu"
           aria-labelledby="demo-positioned-button"
@@ -80,6 +72,14 @@ export default function Navbar(props) {
             </MenuItem>
           ))}
         </Menu>
+        <NavItems style={{ width: "fit-content" }}>
+          <NavItem text="Log In" setPage={setPage} />
+          <NavItem
+            text="Sign Up"
+            color={Constants().Theme.Base}
+            setPage={setPage}
+          />
+        </NavItems>
       </NavbarLayout>
     </NavbarContainer>
   );
@@ -99,6 +99,16 @@ function NavItem(props) {
     </LinkItem>
   );
 }
+
+const StyledButton = styled(Button)`
+  visibility: hidden;
+  @media screen and (max-width: 768px) {
+    visibility: visible;
+    cursor: pointer;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+`;
 
 const StyledMenuIcon = styled(MenuIcon)`
   display: none;
