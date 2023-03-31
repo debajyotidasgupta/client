@@ -113,18 +113,9 @@ function Faq() {
         background: "linear-gradient(0deg, #e6fcff 0%, #ffffff 100%)",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          weight: "100vw",
-          height: "60vh",
-          backgroundColor: Constants().Theme.Base,
-        }}
-      >
+      <ImageContainer>
         <img src={FAQ} alt="FAQ" height="100%" />
-      </div>
+      </ImageContainer>
       {data.map((item, index) => (
         <Section key={index} data={item.QA} image={item.image} value={index} />
       ))}
@@ -138,39 +129,38 @@ function Section(props) {
   return (
     <div>
       <StyledSection value={value}>
-        <div
-          style={{
-            height: "fit-content",
-            padding: "0 4rem",
-            width: "50%",
-          }}
-        >
+        <StyledSubSection>
           {data.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                textAlign: "left",
-                padding: "0.5rem 0",
-              }}
-            >
+            <Text key={index}>
               <p>Q: {item.Q}</p>
               <p>A: {item.A}</p>
-            </div>
+            </Text>
           ))}
-        </div>
-        {image && (
-          <img
-            src={image}
-            alt={`FAQ-${value}`}
-            style={{
-              width: "35%",
-            }}
-          />
-        )}
+        </StyledSubSection>
+        {image && <Image src={image} alt={`FAQ-${value}`} />}
       </StyledSection>
     </div>
   );
 }
+
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  background-color: ${Constants().Theme.Base};
+
+  @media (max-width: 768px) {
+    height: 30vh;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+`;
 
 const StyledSection = styled.div`
   display: flex;
@@ -183,6 +173,47 @@ const StyledSection = styled.div`
   padding: 2rem 5rem;
   font-weight: 400;
   font-size: 0.9rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const StyledSubSection = styled.div`
+  height: fit-content;
+  padding: 0 4rem;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
+`;
+
+const Text = styled.p`
+  text-align: left;
+  padding: 0.5rem 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+
+    p {
+      :first-child {
+        font-weight: 600;
+      }
+    }
+  }
+`;
+
+const Image = styled.img`
+  width: 35%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+  }
 `;
 
 export default Faq;
